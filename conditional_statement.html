@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // 12 hour clock 1-12
+        // 24 hour clock 00-24 - 19:24
+
+        // Write a program that captures the following conditions: 
+        // between 00 - 11:59 - Good Morning 
+        // between 12 - 15:59 < 16 - Good Afternoon
+        // between 16 - 23:59 - Good Evening
+        // if not between 0 and 24, tell the user the input is invalid
+        //&& - and 
+
+        // let hour = 23;
+
+        // if (hour >= 0 && hour < 12)
+        //     console.log("Good Morning ")
+
+        // else if (hour >= 12 && hour < 16)
+        //     console.log("Good Afternoon !")
+
+        // else if (hour >= 16 && hour <= 23)
+        //     console.log("Good Evening!")
+        // else
+        //     console.log("Invalid Input")
+
+
+        // let age = '5';
+
+        // if(age >= 60)
+        //     console.log("Now! you're growing older!")
+        // else if (age >= 18)
+        //     console.log("You are an adult!");
+        // else if (age === 5)
+        //     console.log("You're 5!");
+        //  else
+        //     console.log("You are still a kid !");
+
+        // Write a program that checks if a number is positive , negative, or zero  > , < , === , ==
+
+
+
+
+
+        // Logic Gates
+        // AND Operator
+        // T * F = False
+        // F * T = False
+        // T * T = True
+        // F * F = False
+
+        // OR - ||
+        // T * F = True
+        // F * T = True
+        // T * T = True
+        // F * F = False
+
+
+        // Write a program that checks if a person can enter a party.
+
+        //The person must be at least 18 years old AND must have an invitation.
+
+        //The person must be at least 18 years old OR does not have an invitation, but has Money they can enter ( The person must either have Money or an Invitation )
+
+        // //If the person is under 18 OR does not have an invitation, or has no Money they can not enter.
+
+        // let age = 19;
+        // let hasInvitation = false;
+        // let hasMoney = true;
+
+        // if (age >= 18 && hasInvitation ) {
+        //     console.log("You can enter the party!");
+        // } 
+        // else if ( age >= 18 && (hasInvitation || hasMoney)) {
+        //     console.log("You can enter the party! because you have either the Invitation or Money ");
+        // } else {
+        //     console.log("Sorry! you can not enter the party");
+        // }
+
+        // let age = 10;
+
+        // if (age > 0)
+        //     console.log("Positive")
+
+        // else if (age < 0)
+        //     console.log("Negative")
+
+        // else
+        //     console.log("Zero")
+
+
+        // SWITCH Statement
+
+        // switch (true) {
+        //     case (age > 0) :
+        //         console.log("Positive");
+        //         break;
+        //     case (age < 0) :
+        //         console.log("Negative");
+        //         break;
+        //     default:
+        //         console.log("Zero");        
+        // }
+
+        // let status = "Negative";
+
+        // switch (status) {
+        //     case "Positive":
+        //         console.log("This is Positive");
+        //         break;
+        //     case "Negative":
+        //         console.log("This is Negative");
+        //         break;    
+        //     default:
+        //         console.log("I do not recognize that!");    
+        // }
+
+
+        // Tenary Operators
+
+        let price = 3000;
+
+        if (price >= 1000) 
+            console.log("You can afford it!");
+        else 
+            console.log("Sorry! you can not afford it");
+        
+
+
+        //  condion ? value_if_true : value_if_false
+
+        (price >= 1000) ? console.log("You can afford it!") : console.log("Sorry! you can not afford it");
+
+    </script>
+</body>
+
+</html>

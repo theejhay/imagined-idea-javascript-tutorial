@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        let fruits = ["Cherry", "Apple", "Banana", "Pawpaw", "Mango"];
+
+        
+        // Mango - Index number = 0 
+        // Apple - Index number = 1
+        // Banana - Index number = 2 
+
+        // fruits[0] = "Cherry";
+        // fruits[2] = "Kiwi";
+
+        fruits.push("Kiwi"); //  Push to the end of an array
+        //fruits.unshift("Kiwi"); //  Push to the begining  of an array
+
+        //fruits.pop(); // removes the last element 
+
+        //fruits.shift(); // removes the first element in an array
+
+        //fruits.splice(3, 2) // remove element starting at an index and , how many (second argument)
+
+
+        // banana is between 900 - 1000
+        // fruits.indexOf("Banana"); X
+        // fruits.indexOf("Banana", 900)
+
+        let array_length = fruits.length;
+
+        let my_numbers = [1, 4, 19, 7, 9, 33, 12, '11', '4', 19];
+
+
+        //console.log(my_numbers.indexOf(19));
+        console.log(my_numbers.indexOf(19, 5));
+
+
+    </script>
+</body>
+
+</html>
