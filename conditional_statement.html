@@ -120,26 +120,36 @@
         //         break;
         //     case "Negative":
         //         console.log("This is Negative");
-        //         break;    
+        //         break;
         //     default:
-        //         console.log("I do not recognize that!");    
+        //         console.log("I do not recognize that!");
         // }
 
 
         // Tenary Operators
 
-        let price = 3000;
+        // let price = 3000;
 
-        if (price >= 1000) 
-            console.log("You can afford it!");
-        else 
-            console.log("Sorry! you can not afford it");
-        
+        // if (price >= 1000)
+        //     console.log("You can afford it!");
+        // else
+        //     console.log("Sorry! you can not afford it");
+
 
 
         //  condion ? value_if_true : value_if_false
+        // condition ? value_if_true : condition ? value_if_true : value_if_false
 
-        (price >= 1000) ? console.log("You can afford it!") : console.log("Sorry! you can not afford it");
+        // (price >= 1000) ? console.log("You can afford it!") : console.log("Sorry! you can not afford it");
+
+        let pizzaOrder = 2999;
+
+        if (pizzaOrder > 5000)
+            console.log('You get a 10% discount!')
+        else if (pizzaOrder >= 3000 && pizzaOrder <= 5000)
+            console.log('You get a 5% discount!')
+        else
+            console.log(' No discount, sorry')
 
     </script>
 </body>
