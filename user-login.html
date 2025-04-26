@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .container {
+            margin: 50px;
+        }
+
+        .container input[type="text"] {
+            padding: 5px;
+            width: 100%;
+            font-size: large;
+        }
+
+        .last_name {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px;
+            text-align: center;
+            font-size: large;
+            width: 150px;
+            border: 0;
+            background-color: rgb(27, 108, 239);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            padding: 10px;
+            text-align: center;
+            font-size: large;
+            width: 150px;
+            border: 0;
+            background-color: rgb(2, 53, 142);
+            color: white;
+            cursor: pointer;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            font-size: large;
+            font-weight: bold;
+            background-color: rgb(9, 98, 4);
+            color: white;
+            width: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="message" id="message"></div>
+
+        <div class="first_name">
+            <label> First Name *</label><br>
+            <input type="text" id="first_name" placeholder="John" required>
+        </div>
+
+        <div class="last_name">
+            <label> Last Name *</label><br>
+            <input type="text" placeholder="Doe" id="last_name" required>
+            <br><br>
+
+
+            <button id="login" onclick="userLogin()"> Sign in!</button>
+        </div>
+    </div>
+
+    <script>
+        // To get value within an html tag (not for input) you use (.innerHTML)
+        // To set value within an HTML tag you use (.textContent = "")
+        // To get inout value, you use (.value)
+
+
+        function userLogin() {
+            let firstName = document.getElementById("first_name").value;
+            let lastName = document.getElementById("last_name").value;
+
+            let message = `Welcome ${firstName} ${lastName} !`;
+
+            document.getElementById("message").textContent = message;
+        }
+
+    </script>
+</body>
+
+</html>
