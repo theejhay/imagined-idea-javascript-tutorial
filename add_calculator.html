@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Calculator</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="answer" id="answer"></div>
+        <div class="first_add">
+            <input type="text" id="first_number" placeholder="Enter first number">
+        </div>
+        <div class="second_add">
+            <input type="text" id="second_number" placeholder="Enter first number">
+        </div>
+        <div class="button">
+            <button id="add" onclick="addMe()">Add</button>
+        </div>
+    </div>
+    <script>
+       function addMe() {
+        let firstnumber = document.getElementById("first_number").value;
+        let lastnumber = document.getElementById("second_number").value;
+
+        let answer = ` ${parseInt(firstnumber)} + ${parseInt(lastnumber)} = ${parseInt(firstnumber) +  parseInt(lastnumber)} `;
+
+        document.getElementById("answer").textContent = answer;
+        
+       }
+    </script>
+    
+</body>
+</html>
