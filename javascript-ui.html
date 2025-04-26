@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        *{
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="welcome"> Welcome </h1>
+
+    <label for="username">username</label>
+    <input type="text" class="myText" name="myText" id="myText"><br><br>
+
+    <p id="message" style="color: red;"> </p>
+
+    <button id="mySubmit" onclick="submitUsername()">Submit</button>
+
+    <script>
+        let getMessage = document.getElementById("message").innerText;
+        console.log(getMessage)
+
+        let getUsername = document.getElementById("myText").value;
+        console.log(getUsername);
+
+        let username;
+
+        // document.getElementById("mySubmit").onclick = function(){
+        //     username = document.getElementById("myText").value;
+        //     document.getElementById("message").textContent= `Hello ${username}`;
+        //     console.log(isUsernameEmpty(username));
+        //     if (!isUsernameEmpty(username)){
+        //         document.getElementById("welcome").textContent = `Welcome ${username}`;
+        //     } else {
+        //         document.getElementById("message").textContent = "username is empty!"
+        //     }
+            
+        // }
+
+        function isUsernameEmpty(username){
+            return (username === '' || username === undefined)
+        }
+
+        function submitUsername(){
+            username = document.getElementById("myText").value;
+            document.getElementById("message").textContent= `Hello ${username}`;
+            console.log(isUsernameEmpty(username));
+            if (!isUsernameEmpty(username)){
+                document.getElementById("welcome").textContent = `Welcome ${username}`;
+            } else {
+                document.getElementById("message").textContent = "username is empty!"
+            }
+            
+        }
+
+
+
+
+        //alert("Hello World")
+
+        // let age = prompt("How Old are you?");
+        // document.getElementById("message").textContent = `You're ${age} years old!`
+
+
+
+    </script>
+    
+</body>
+</html>

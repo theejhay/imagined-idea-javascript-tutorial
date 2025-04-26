@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Objects</title>
+</head>
+<body>
+
+    <script>
+        // LENGTH
+        let greeting = "Good Morning!";
+        console.log(greeting);
+
+        console.log(greeting.length)
+
+        // INCLUDES
+        let sentence = "Learning Javascript is fun!";
+
+        console.log(sentence.includes("Javascript"))
+
+        let text = "I Love coffee while at work because coffee is good";
+
+        // REPLACE
+        let updatedText = text.replace("coffee", "tea");// It replaces first occurrence. 
+
+        console.log(updatedText);
+
+        // LOWER and UPPER Case
+        console.log(text.toUpperCase())
+        console.log(text.toLowerCase())
+
+        // TRIM - remove white spaces
+
+        let messyWord = "      Hello   There !     ";
+        console.log(messyWord.trim());
+
+        // ESCAPE NOTATION
+        // \n = new line
+        // \' = single quote
+        // \" = double quote
+
+        let poem = " Roses are red \n Violets are blue";
+        console.log(poem);
+
+        let quote = `John said 'Hello'`;
+        console.log(quote);
+
+        // SPLIT
+        let words = "Coding-is-amazing-and-i-love-it";
+        let splittedWords = words.split("-");
+        console.log(splittedWords);
+    
+
+
+
+
+
+        // write a program to check if John is part of the invitees for a party
+
+        // let invitees = "Mike Joel Felicia Paul Michael";
+
+        // let attendeeExist = invitees.includes("Joel");
+
+        // if (attendeeExist) {
+        //     console.log("You can attend the party!")
+        // } else {
+        //     console.log("Sorry! you're not invited")
+        // }
+
+        // let itemToBuy = "kiwi";
+        // let fruitStore = ["apple", "banana", "cherry"];
+
+        // if(fruitStore.includes(itemToBuy)) {
+        //     console.log(`Hi, ${itemToBuy} exist and available`)
+        // } else {
+        //     console.log(`Sorry!, we don't have ${itemToBuy}`);
+        // }
+        
+
+        // if itemToBuy exist 
+        // Hi, {fruit_name} exist and available
+        //else
+        // Sorry!, we don't have {fruit_name}
+
+
+        //console.log();
+
+
+
+
+    </script>
+    
+</body>
+</html>

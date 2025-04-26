@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Objects</title>
+</head>
+<body>
+
+    <script>
+        // current date
+        const now = new Date();
+        console.log(now.getFullYear());
+        console.log(now.getMonth()); // 3 - April
+        console.log(now.getDate());
+        console.log(now.getDay()); // sun = 0, Mon = 1
+
+        const customDate = new Date();
+        customDate.setFullYear(2040);
+        customDate.setMonth(5);
+        customDate.setDate(30)
+
+        console.log(customDate.toDateString());
+
+        const reminder = new Date(2025, 3, 24, 12)
+        console.log("Reminder Set for: ", reminder.toISOString());
+
+
+        // get part of a date
+
+
+        // console.log(now.toDateString())
+        // console.log(now.toISOString())
+
+        // create your own time 
+        const date1 = new Date("October 18 1990 09:00")
+        const date2 = new Date(2025, 3, 23, 20 )
+        //console.log(date2);
+
+        window.alert("Hello World");
+    </script>
+    
+</body>
+</html>
