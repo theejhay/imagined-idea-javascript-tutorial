@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .increase {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: 0;
+        }
+
+        .decrease {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: 0;
+        }
+
+        .counter {
+            font-size: 50px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="increase" onclick="increaseMe()"> Increase (+)</button>
+        <button class="decrease" onclick="decreaseMe()"> Decrease (-)</button>
+
+        <h1 id="showCount" class="counter">0</h1>
+    </div>
+
+
+    <script>
+        // To get value within an html tag (not for input) you use (.innerHTML)
+        // To set value within an HTML tag you use (.textContent = "")
+        // To get inout value, you use (.value)
+
+        let counter = document.getElementById("showCount").innerHTML;
+
+        function increaseMe() {
+            counter++;
+            document.getElementById("showCount").textContent = counter;
+        }
+
+        function decreaseMe() {
+            counter--;
+            document.getElementById("showCount").textContent = counter;
+        }
+
+        // Classwork 
+        //================
+        // Create a simple addition caculator 
+        // - Input first number 
+        // - Input second number 
+        // - I want to click a button with (Add) that calls a function on click 
+        // - I want to display my result above the first input 
+
+
+    </script>
+
+
+</body>
+
+</html>
