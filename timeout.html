@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+</head>
+<body>
+    <p id="message"> Hello World </p>
+
+    <script>
+        // Synchronous Javascript
+        console.log("Order Food");
+        console.log("Order is in progress");
+        console.log("Food is ready");
+        console.log("Call A friend");
+
+        // Asynchronous Javascript 
+        // setTimeout - it delays execution of some code
+        setTimeout(() => {
+            console.log("This shows after 3 seconds");
+        }, 3000)
+
+        const message = document.getElementById("message");
+        message.style.color = "green";
+
+        setTimeout( ()=> {
+            message.style.color = "red";
+        }, 3000)
+
+
+        //Use setTimeout to show a welcome message after a few seconds
+        // i.e When a button is clicked
+            // wait for 3 seconds using setTimeout
+            // Then display "Welcome to Javascript Class!" in a paragraph tag.
+    </script>
+    
+</body>
+</html>

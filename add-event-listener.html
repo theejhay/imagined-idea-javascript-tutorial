@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    
+
+    <input type="text" id="name"><br>
+    <input type="text" id="username" placeholder="username"><br>
+    <i id="username_error_message"></i>
+    <br><br>
+    <button id="clickMe"> Click me!</button>
+
+
+    <p id="message"></p>
+
+    <script>
+        // addEventListener
+
+        // const btn = document.getElementById("clickMe");
+        // btn.addEventListener("mouseover", function(){
+        //     console.log("Button Mouseover");
+        // })
+        // btn.addEventListener("click", function(){
+        //     console.log("Button Clicked");
+        // })
+
+        // let input = document.getElementById("name");
+        // input.addEventListener("input", function(event){
+        //     console.log(event.target.value);
+        //     document.getElementById("message").textContent = event.target.value;
+        // })     
+        
+        const btn = document.getElementById("clickMe");
+        const name = document.getElementById("name");
+        name.placeholder = "Enter your name";
+        btn.disabled = true;
+
+        document.getElementById("username").addEventListener("input", function(event){
+            const username = event.target.value;
+            const message = document.getElementById("message");
+            const usernameErrorMessage = document.getElementById("username_error_message");
+        
+            if(username.length < 1){
+                usernameErrorMessage.textContent = "";
+            }
+
+            if(username.length <= 3){
+                btn.disabled = true;
+                usernameErrorMessage.textContent = `Username ${username} must be at least 3 characters`;
+                usernameErrorMessage.style.color = "white"
+                usernameErrorMessage.style.backgroundColor = "red";
+                usernameErrorMessage.style.padding = "5"
+            } else {
+                btn.disabled = false;
+                usernameErrorMessage.textContent = `Username ${username} is available!`;
+                usernameErrorMessage.style.color = "white"
+                usernameErrorMessage.style.backgroundColor = "green";
+                usernameErrorMessage.style.padding = "5"
+            }
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>
