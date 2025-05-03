@@ -63,6 +63,19 @@
             }
         });
 
+        // Asynchronous Javascript 
+        // setTimeout - it delays execution of some code
+        setTimeout(() => {
+            console.log("This shows after 3 seconds");
+        }, 3000)
+
+        const message = document.getElementById("message");
+        message.style.color = "green";
+
+        setTimeout( ()=> {
+            message.style.color = "red";
+        }, 3000)
+
 
 
 

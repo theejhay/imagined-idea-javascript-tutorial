@@ -8,6 +8,9 @@
 <body>
     <p id="message"> Hello World </p>
 
+    <button id="greetBtn">Click Me to Greet!</button>
+    <p id="greetMessage"></p>
+
     <script>
         // Synchronous Javascript
         console.log("Order Food");
@@ -33,6 +36,14 @@
         // i.e When a button is clicked
             // wait for 3 seconds using setTimeout
             // Then display "Welcome to Javascript Class!" in a paragraph tag.
+
+            document.getElementById("greetBtn").addEventListener("click", function () {
+                setTimeout( () => {
+                    document.getElementById("greetMessage").textContent = "Welcome to Javascript Class!";
+                }, 3000);
+            })
+
+
     </script>
     
 </body>
