@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter/Map/ForEach/Some/Every...etc</title>
+</head>
+<body>
+    <script>
+        // Filter
+
+        [1,2,3,4,5,6]
+        // item = 1, index = 0, array= [1,2,3,4,5,6]
+        // array.filter((item, index, array) => {
+        //     return condition;
+        // })
+
+        // Example 
+        // Keep only positive numbers in an array
+        const numbers = [-2,-5, 5, 2, 3, 7];
+        const positiveNumbers = numbers.filter(num => {
+            return num > 0 // [5,2,3,7]
+        });
+
+        const negativeNumbers = numbers.filter(num => {
+            return num < 0 //[-2, -5]
+        })
+
+        console.log(negativeNumbers);
+        
+        // Example 2
+        const people = [
+            {name: 'Tom', age: 16},
+            {name: 'Taiwo', age: 12},
+            {name: 'John', age: 18},
+            {name: 'Mike', age: 21},
+        ];
+
+        // Allow only adults (from age: 18 and above to enter the club)
+
+        const adults = people.filter(p => {
+            return p.age >= 18
+        });
+
+        console.log(adults);
+
+        const developers = [
+            {name: 'john', taskCompleted: 4},
+            {name: 'taiwo', taskCompleted: 0},
+            {name: 'femi', taskCompleted: 1},
+            {name: 'paul', taskCompleted: 2},
+            {name: 'kemi', taskCompleted: 3}
+        ];
+
+        const filterLazyOnes = developers.filter(developer =>{
+            return developer.taskCompleted > 0
+        });
+
+        console.log(filterLazyOnes);
+
+    </script>
+</body>
+</html>

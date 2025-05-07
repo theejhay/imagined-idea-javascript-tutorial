@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter/Map/ForEach/Some/Every...etc</title>
+</head>
+
+<body>
+    <script>
+        //Example 1
+        // Adding up your grocery bill
+
+       
+        const menNames = ["Paul", "Femi", "Goodness", "Leke"];
+        const titled = menNames.map(name => {
+            return 'Mr.' + name
+        });
+
+        console.log(titled);
+
+        const items = [
+            {name: 'Shirt'},
+            {name: 'Hat'},
+            {name: 'laptop'},
+            {name: 'Pen'},
+            {name: 'Milk'}
+        ];
+
+        const htmlCode = items.map(item => {
+            return `<li> ${item.name} </li>`
+        });
+
+        console.log(htmlCode);
+
+
+       
+
+        
+
+
+    </script>
+</body>
+
+</html>
