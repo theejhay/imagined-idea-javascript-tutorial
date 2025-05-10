@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        // Async - Marks a function as asynchronous 
+        // Await - tells javascript to wait for a task to finish before moving on
+        async function returnBook(isReturned) {
+            if (isReturned) {
+                return "Book returned Thank you";
+            } else {
+                return "You didn't return my book";
+            }
+        }
+
+        async function handleReturn() {
+            console.log("Process to Return Book!");
+            const message = await returnBook(true);
+            console.log("Waiting time over")
+            console.log(message);
+        }
+
+        //handleReturn();
+
+
+        // async function getData(){
+        //     console.log("Starting to get data....");
+
+        //     const response =  await fetch("https://jsonplaceholder.typicode.com/users/1");
+        //     const data =  await response.json();
+
+        //     console.log(data);
+        // }
+
+        // getData();
+
+
+        function boilWater() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Water is boiled");
+                    resolve()
+                }, 2000);
+            })
+
+
+        }
+
+        async function makeTea() {
+            console.log("Start Making tea");
+
+            await boilWater();// wait for the water to boil 
+
+            console.log("Add teabag");
+            console.log("Tea is ready");
+        }
+
+        makeTea();
+
+        async function prepareDinner() {
+            console.log("Preparing Dinner");
+            await delay(2000);
+            console.log("Dinner is Ready!");
+        }
+
+        async function eatDinner() {
+            await prepareDinner();
+            console.log("Now eating dinner");
+        }
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        //eatDinner();
+
+
+
+    </script>
+</body>
+
+</html>

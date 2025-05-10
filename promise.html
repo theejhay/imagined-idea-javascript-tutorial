@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // Dad promised to buy a PS5 game
+        // If daddy buy the PS5, you're happy (resolve)
+        //If he didn't buy the PS5, you're disappointed (reject)
+
+        //.then(), .catch()
+
+        // Promise states
+        // pending - still waiting 
+        //fulfilled - task completed
+        // rejected - task failed
+
+        function returnBook(isReturned) {
+            return new Promise((resolve, reject) =>{
+                if(isReturned){
+                    resolve("Book returned! Thank you.");
+                } else {
+                    reject("You didn't return my book!");
+                }
+            });
+        }
+
+        returnBook(true)
+            .then(message => console.log(message))
+            .catch(error => {
+                console.log(`${error}, and you are not my friend`)
+            });
+
+       function playStation5(isBought){
+        const checkIfBought = new Promise((resolve, reject) => {
+            if(isBought){
+                resolve("Thank you daddy for buying my PS5 Game");
+            } else {
+                reject("I'm not happy dad but I believe you know what's best for me!");
+            }
+        });
+
+        return checkIfBought;
+       }
+
+       playStation5(false)
+            .then(msg => console.log(msg))
+            .catch(error => console.log(error));
+
+    
+    //    const isHappy = () => console.log("I am Happy");
+    //    isHappy();
+
+    // function getUsers(){
+    //     fetch("https://jsonplaceholder.typicode.com/users")
+    //         .then(res => console.log(res.json()))
+    //         .catch(err => console.log(err));
+    // }
+
+    // getUsers();
+
+
+    </script>
+</body>
+</html>

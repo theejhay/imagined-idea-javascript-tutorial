@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+
+<body>
+
+    <script>
+
+        function orderPizza(customerName, johnCallBack) {
+            console.log(`${customerName} ordered a pizza`);
+            console.log(" Pizza is Ready...");
+            johnCallBack();
+        }
+
+        
+
+        function pickUpPizza() {
+            console.log("Calling customer to pickup the Pizza");
+        }
+
+        //orderPizza("Sam", pickUpPizza);
+
+
+        function eatDinner(callback){
+            console.log("Eating Dinner.....");
+            callback();
+        }
+
+        function washDishes() {
+            console.log("It's time to wash dishes...");
+        }
+
+        eatDinner(washDishes);
+
+    </script>
+
+</body>
+
+</html>
