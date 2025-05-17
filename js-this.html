@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - this keywword && DOM</title>
+</head>
+<body>
+    <h1 id="title"> Hello World!</h1>
+
+    <button onclick="sayHi(this)"> Click to greet</button>
+
+    <script>
+        // DOM - Document Object Model
+        // DOM Method 
+        /*
+            getElementById()
+            getElementsByClassName()
+            getElementsByTagName()
+        */
+
+        const heading = document.getElementById("title");
+        heading.textContent = "Hello Javascript";
+
+        // DOM Manipulation.
+
+
+        // this keyword
+
+        // If taiwo says "I love coding"  I means - Taiwo  love coding 
+        // If Paul says "I love coding" I means - Paul love coding 
+
+        // Object revisit
+        const person = {
+            name: "Taiwo",
+            greet() {
+                console.log(this);
+                console.log(`Hello, my name is ${this.name}`);
+            }
+        };
+        person.greet();
+
+
+        const sayHi = (element) => {
+            console.log(element);
+        }
+    </script>
+    
+</body>
+</html>

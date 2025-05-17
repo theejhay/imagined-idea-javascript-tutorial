@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+
+    <script>
+        const user = {
+            name: "Taiwo",
+            age: 50,
+            country: "Nigeria"
+        };
+
+        // Traditional way
+        // const name = user.name;
+        // const age = user.age;
+        // const country = user.country;
+
+        // console.log(country);
+
+        // Destructuring Way
+
+        const { name, age, country } = user;
+        console.log(name);
+
+        const car =  {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2025
+        };
+
+        const {brand, model, year} = car;
+        console.log(brand);
+
+        // Nested Object Destructuring 
+        const person = {
+            name_one: "John",
+            address: {
+                city: "London",
+                country_one: "UK"
+            }
+        };
+
+        let {name_one, address: {city, country_one }} = person;
+
+        console.log(name);
+
+
+        // Nullish Coalescing Operator ??
+
+        let username;
+        let displayName = username ?? "Guest";
+        console.log(displayName);
+
+        // if(typeof username === "undefined"){
+        //     console.log("Guest");
+        // } else {
+        //     console.log(username);
+        // }
+
+        // Rest Parameter
+        const my_user = {
+            name: 'Alex',
+            address: '12 Moronfolu Street',
+            my_age: 43
+        };
+
+        const {my_age, ...rest} = my_user;
+        console.log(my_age, rest);
+
+        
+
+
+    </script>
+    
+</body>
+</html>
